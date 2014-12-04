@@ -1,10 +1,10 @@
 SAS to Python guide
 ===================
 
-proc freq
----------
+`proc freq`
+-----------
 
-### basic ###
+#### basic ####
 
 ```SAS
 proc freq order=freq data=mydata;
@@ -17,7 +17,7 @@ mydata.myvar.value_counts()
 ```
 
 
-### with missing ###
+#### with missing ####
 
 ```SAS
 proc freq order=freq data=mydata;
