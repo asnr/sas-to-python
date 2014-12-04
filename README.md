@@ -44,3 +44,17 @@ run;
 ```python
 concatenated = pandas.concat([mydata1, mydata2])
 ```
+
+
+Misc
+----
+
+#### number of rows in a datastep ####
+
+```SAS
+* haha nice try. Try this for size: http://www2.sas.com/proceedings/sugi26/p095-26.pdf;
+```
+
+```python
+len(mydata)
+```
