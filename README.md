@@ -7,6 +7,19 @@ SAS to Python guide
 #### basic ####
 
 ```SAS
+proc freq data=mydata;
+    tables myvar / nocol nopercent nocum;
+run;
+```
+
+```python
+mydata.myvar.value_counts().sort_index()
+```
+
+
+#### sort by frequency ####
+
+```SAS
 proc freq order=freq data=mydata;
 	tables myvar / nocol nopercent nocum;
 run;
@@ -33,7 +46,7 @@ mydata.myvar.value_counts(dropna=False)
 `data` step
 -----------
 
-#### concatenate datasets #### 
+#### concatenate datasets ####
 
 ```SAS
 data concatenated;
