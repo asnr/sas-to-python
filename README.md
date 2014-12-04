@@ -28,3 +28,19 @@ run;
 ```python
 mydata.myvar.value_counts(dropna=False)
 ```
+
+
+`data` step
+-----------
+
+#### concatenate datasets #### 
+
+```SAS
+data concatenated;
+    set mydata1 mydata2;
+run;
+```
+
+```python
+concatenated = pandas.concat([mydata1, mydata2])
+```
