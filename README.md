@@ -4,8 +4,6 @@ SAS to Python guide
 `proc freq`
 -----------
 
-#### basic ####
-
 ```SAS
 proc freq data=mydata;
     tables myvar / nocol nopercent nocum;
@@ -40,6 +38,33 @@ run;
 
 ```python
 mydata.myvar.value_counts(dropna=False)
+```
+
+
+`proc means`
+------------
+
+```SAS
+proc means data=mydata n mean std min max p25 median p75;
+    var myvar;
+run;
+```
+
+```python
+mydata.myvar.describe()
+```
+
+
+#### more percentiles ####
+
+```SAS
+proc means data=mydata n mean std min max p1 p5 p10 p25 median p75 p90 p95 p99;
+	var myvar;
+run;
+```
+
+```python
+mydata.myvar.describe(percentiles=[.01, .05, .1, .25, .5, .75, .9, .95, .99])
 ```
 
 
