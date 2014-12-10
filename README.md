@@ -84,6 +84,30 @@ concatenated = pandas.concat([mydata1, mydata2])
 ```
 
 
+`proc contents`
+---------------
+
+```SAS
+proc contents data=mydata;
+run;
+```
+
+```python
+mydata.info()
+```
+
+#### save output ####
+
+```SAS
+proc contents noprint data=mydata out=contents;
+run;
+```
+
+```python
+contents = mydata.info()  # check this is right
+```
+
+
 Misc
 ----
 
